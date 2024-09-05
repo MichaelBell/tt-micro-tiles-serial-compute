@@ -1,5 +1,7 @@
 /*
  * Shift register with ALU
+ *
+ * Copyright (C) 2024 Michael Bell
  */
 
 `default_nettype none
@@ -32,6 +34,6 @@ module tt_um_MichaelBell_shift_compute (
     endcase
   end
 
-  assign uo_out = rst_n ? ui_in : result;
+  assign uo_out = rst_n ? result : ui_in;
 
 endmodule  // tt_um_MichaelBell_shift_compute
