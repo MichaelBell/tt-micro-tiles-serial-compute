@@ -9,16 +9,10 @@ You can also include images in this folder and reference them in the markdown. E
 
 ## How it works
 
-The micro tiles test module is a simple module that demonstrates the use of the micro tile interface.
+A shift register that reads ui_in[0].  The low and high byte can be output on uo_out.
 
-It has two modes of operation:
-
-1. Mirroring the input pins to the output pins (when `rst_n` is low).
-3. Outputing a counter on the output pins and the bidirectional pins (when `rst_n` is high).
-
-The counter is an 8-bit counter that increments on every clock cycle, and resets when `rst_n` is low.
+Additionally the result of certain computations of the low and high byte of the shift register can be latched and displayed.
 
 ## How to test
 
-1. Set `rst_n` low and observe that the input pins (`ui_in`) are output on the output pins (`uo_out`).
-2. Set `rst_n` high and observe that the counter is output on the output pins (`uo_out`).
+TODO

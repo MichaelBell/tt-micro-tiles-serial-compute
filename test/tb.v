@@ -16,11 +16,17 @@ module tb ();
   // Wire up the inputs and outputs:
   reg clk;
   reg rst_n;
-  reg [7:0] ui_in;
+
+  reg data_in;
+  reg [2:0] select;
+  reg latch_add;
+  reg latch_and;
+
+  wire [7:0] ui_in = {2'b00, latch_and, latch_add, select, data_in};
   wire [7:0] uo_out;
 
   // Replace tt_um_micro_test with your module name:
-  tt_um_micro_test user_project (
+  tt_um_MichaelBell_shift_compute user_project (
 
       // Include power ports for the Gate Level test:
 `ifdef GL_TEST
