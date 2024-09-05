@@ -1,9 +1,5 @@
 /*
- * tt_um_factory_test.v
- *
- * Test user module
- *
- * Author: Sylvain Munaut <tnt@246tNt.com>
+ * Shift register with ALU
  */
 
 `default_nettype none
@@ -27,15 +23,15 @@ module tt_um_MichaelBell_shift_compute (
 
   reg [7:0] result;
   always @* begin
-    case (ui_in[3:1])
-      3'b001: result = shift_reg[7:0];
-      3'b010: result = shift_reg[15:8];
-      3'b100: result = result_add;
-      3'b101: result = result_and;
+    case (ui_in[2:1])
+      2'b00: result = shift_reg[7:0];
+      2'b01: result = shift_reg[15:8];
+      2'b10: result = result_add;
+      2'b11: result = result_and;
       default: result = ui_in;
     endcase
   end
 
-  assign uo_out = result;
+  assign uo_out = rst_n ? ui_in : result;
 
 endmodule  // tt_um_MichaelBell_shift_compute

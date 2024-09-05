@@ -20,24 +20,24 @@ project:
 # The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
 pinout:
   # Inputs
-  ui[0]: "in[0]"
-  ui[1]: "in[1]"
-  ui[2]: "in[2]"
-  ui[3]: "in[3]"
-  ui[4]: "in[4]"
-  ui[5]: "in[5]"
+  ui[0]: "Data in"
+  ui[1]: "Output select 0"
+  ui[2]: "Output select 1"
+  ui[3]: ""
+  ui[4]: "Latch ADD"
+  ui[5]: "Latch AND"
   ui[6]: "in[6]"
   ui[7]: "in[7]"
 
   # Outputs
-  uo[0]: "output[0] / counter[0]"
-  uo[1]: "output[1] / counter[1]"
-  uo[2]: "output[2] / counter[2]"
-  uo[3]: "output[3] / counter[3]"
-  uo[4]: "output[4] / counter[4]"
-  uo[5]: "output[5] / counter[5]"
-  uo[6]: "output[6] / counter[6]"
-  uo[7]: "output[7] / counter[7]"
+  uo[0]: "output[0]"
+  uo[1]: "output[1]"
+  uo[2]: "output[2]"
+  uo[3]: "output[3]"
+  uo[4]: "output[4]"
+  uo[5]: "output[5]"
+  uo[6]: "output[6]"
+  uo[7]: "output[7]"
 
   # Bidirectional pins - be be blank, not available for micro tile projects
   uio[0]: ""
